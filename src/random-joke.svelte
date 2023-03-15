@@ -7,11 +7,11 @@
     let imgAlt: string = ''
     let imgDate: string = ''
 
-    function fetchId() {
-        return fetch('https://fwd.innopolis.app/api/hw2?email=' + email).then(r => r.json());
+    async function fetchId(): Promise<number> {
+        return await fetch('https://fwd.innopolis.app/api/hw2?email=' + email).then(r => r.json());
     }
 
-    function fetchImage(id: string) {
+    async function fetchImage(id: string): Promise<Comic> {
         return fetch('https://getxkcd.vercel.app/api/comic?num=' + id).then(r => r.json());
     }
 

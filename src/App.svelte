@@ -1,7 +1,10 @@
 <script lang="ts">
     import RandomJoke from "./random-joke.svelte";
+    import Header from "./header.svelte";
+    import Footer from "./footer.svelte";
 </script>
 
+<Header/>
 <div class="container">
     <div class="row">
         <div class="col-3"></div>
@@ -65,3 +68,4 @@
     </div>
 </div>
 <RandomJoke/>
+<Footer/>
